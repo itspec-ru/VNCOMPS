@@ -196,7 +196,7 @@ endif()
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 find_package(Threads REQUIRED)
 
-add_subdirectory (NativeAPI)
+add_subdirectory (src)
 
 if(COMP_EXTERNAL)
     string(APPEND manifest_begin ${manifest_end})
