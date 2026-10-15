@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.18...3.31 FATAL_ERROR)
 include(${CMAKE_CURRENT_SOURCE_DIR}/sources.cmake)
 set(AddInNative_SRC ${SRC})
 #----------------------------------------------------------------------------------------------------------------#
-include_directories(${CMAKE_SOURCE_DIR}/./include)
+include_directories(${CMAKE_SOURCE_DIR}/../include)
 #----------------------------------------------------------------------------------------------------------------#
 if(NOT TARGET ${Addn_Native})
     project(${Addn_Native} CXX)

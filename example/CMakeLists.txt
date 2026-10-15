@@ -196,7 +196,18 @@ endif()
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 find_package(Threads REQUIRED)
 
-add_subdirectory (src)
+add_subdirectory (NativeAPI)
+add_subdirectory (AddInChrome)
+add_subdirectory (AddInChromeSetup)
+
+if (WIN32)
+    add_subdirectory(AddInIE)
+    if(NOT DEFINED FROM_ZIP)
+        add_subdirectory(COM)
+    endif()
+    add_subdirectory(AddInIESetup)
+endif (WIN32)
+
 
 if(COMP_EXTERNAL)
     string(APPEND manifest_begin ${manifest_end})
